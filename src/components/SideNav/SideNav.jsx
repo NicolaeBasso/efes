@@ -1,42 +1,95 @@
-import React from 'react';
-import { Image, Menu } from 'antd';
-import { DashboardOutlined, BarChartOutlined, FileDoneOutlined, UserAddOutlined, SettingOutlined } from '@ant-design/icons';
-import 'antd/dist/antd.css';
+import React from "react";
+import { Image, Menu } from "antd";
+import { useHistory } from "react-router-dom";
+import {
+  DashboardOutlined,
+  BarChartOutlined,
+  FileDoneOutlined,
+  UserAddOutlined,
+  SettingOutlined,
+} from "@ant-design/icons";
+import "antd/dist/antd.css";
+import "./SideNav.css";
 
-const { SubMenu } = Menu;
+export const SideNav = (props) => {
+  const history = useHistory();
 
-export const SideNav = () => {
-  const handleClick = e => {
-    console.log('click ', e);
+  const handleClick = (e) => {
+    console.log("click ", e);
   };
 
   return (
-    <React.Fragment>
+    <div className={"sidenav"}>
       <Image
-        width={200}
-        height={100}
+        width={"144.25px"}
+        height={"50.25px"}
         src="https://media.publika.md/md/image/201207/full/efeslogo_hq_jpg_18649000.jpg"
+        preview={false}
       />
 
-    <Menu
-      onClick={handleClick}
-      style={{ width: 256 }}
-      defaultSelectedKeys={['1']}
-      defaultOpenKeys={['sub1']}
-      mode="inline"
-    >
-      <SubMenu key="sub1" icon={<DashboardOutlined />} title="Dashboard" />
+      <Menu
+        style={{ width: 200 }}
+        defaultSelectedKeys={[props.defaultSelectedKeys]}
+        mode="inline"
+      >
+        <Menu.Item
+          key="dashboard"
+          icon={<DashboardOutlined />}
+          title="Dashboard"
+          onClick={() => {
+            history.push("dashboard");
+          }}
+        >
+          Dashboard
+        </Menu.Item>
 
-      <SubMenu key="sub2" icon={<BarChartOutlined />} title="Tasks Table" />
+        <Menu.Item
+          key="tasks"
+          icon={<BarChartOutlined />}
+          title="Tasks Table"
+          onClick={() => {
+            history.push("tasks");
+          }}
+        >
+          {" "}
+          Tasks
+        </Menu.Item>
 
-      <SubMenu key="sub3" icon={<FileDoneOutlined />} title="Reports Page" />
+        <Menu.Item
+          key="reports"
+          icon={<FileDoneOutlined />}
+          title="Reports Page"
+          onClick={() => {
+            history.push("reports");
+          }}
+        >
+          {" "}
+          Reports
+        </Menu.Item>
 
-      <SubMenu key="sub4" icon={<UserAddOutlined />} title="Create User" />
+        <Menu.Item
+          key="createuser"
+          icon={<UserAddOutlined />}
+          title="Create User"
+          onClick={() => {
+            history.push("createuser");
+          }}
+        >
+          {" "}
+          Create User
+        </Menu.Item>
 
-      <SubMenu key="sub5" icon={<SettingOutlined />} title="Settings" />
-      
-    </Menu>
-    </React.Fragment>
-    
+        <Menu.Item
+          key="settings"
+          icon={<SettingOutlined />}
+          title="Settings"
+          onClick={() => {
+            history.push("settings");
+          }}
+        >
+          Settings
+        </Menu.Item>
+      </Menu>
+    </div>
   );
-}
+};
