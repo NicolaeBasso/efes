@@ -1,6 +1,7 @@
 import React from 'react';
 import 'antd/dist/antd.css';
 import { Table, Tag, Space } from 'antd';
+import './TasksPage.css';
 
 export const TasksPage = () => {
     const { Column, ColumnGroup } = Table;
