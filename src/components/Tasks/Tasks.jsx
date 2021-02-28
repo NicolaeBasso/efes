@@ -1,9 +1,9 @@
 import React from "react";
 import { Table, Tag, Space } from "antd";
 import { Layout } from "antd";
-import { SideNav } from "components/SideNav/SideNav";
+import { SidenavAndHeader } from "components/common/SidenavAndHeader/SidenavAndHeader";
 import "antd/dist/antd.css";
-import "./Tasks.css";
+import "./style.css";
 
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -40,8 +40,8 @@ export const Tasks = () => {
   return (
     <>
       <h1>Tasks route</h1>
-      <SideNav defaultSelectedKeys={"tasks"}></SideNav>
-      <Layout>
+      <SidenavAndHeader defaultSelectedKeys={"tasks"} badgeCount={999} />
+      {/*<Layout>
         <Sider>Sider</Sider>
         <Layout>
           <Header>Header</Header>
@@ -80,7 +80,7 @@ export const Tasks = () => {
             </Space>
           )}
         />
-      </Table>
+          </Table>*/}
     </>
   );
 };

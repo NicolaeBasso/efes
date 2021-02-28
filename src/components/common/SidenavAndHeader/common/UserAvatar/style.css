@@ -1,0 +1,21 @@
+.avatar {
+  background-color: white;
+  border: solid gray 3px;
+  color: black;
+  font-weight: bold;
+}
+
+.avatar p {
+  line-height: 58px;
+}
+
+.avatarWithNotifications p {
+  line-height: 58px;
+}
+
+.avatarWithNotifications {
+  background-color: white;
+  border: solid gray 3px;
+  color: black;
+  font-weight: bold;
+}

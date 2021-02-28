@@ -1,0 +1,13 @@
+.sidenav {
+  width: 200px;
+  height: 64px;
+  text-align: center;
+}
+
+.sidenav Image {
+}
+
+.imageWrapper {
+  width: 176px;
+  line-height: 64px;
+}

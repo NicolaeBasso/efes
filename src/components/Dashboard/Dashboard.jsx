@@ -1,10 +1,12 @@
-import { SideNav } from "components/SideNav/SideNav";
+import { SidenavAndHeader } from "components/common/SidenavAndHeader/SidenavAndHeader";
+import "./style.css";
 
 export const Dashboard = () => {
   return (
     <>
       <h1>Dashboard route</h1>
-      <SideNav defaultSelectedKeys={"dashboard"}></SideNav>
+
+      <SidenavAndHeader defaultSelectedKeys={"dashboard"} badgeCount={2} />
     </>
   );
 };

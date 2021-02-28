@@ -32,6 +32,9 @@
 [data-theme="dark"] .ant-layout-content {
   background: #107bcb;
 }
-> .code-box-demo > .ant-layout + .ant-layout {
+.code-box-demo > .ant-layout + .ant-layout {
   margin-top: 48px;
+}
+.SidenavUserWrapper {
+  display: inline-flex;
 }

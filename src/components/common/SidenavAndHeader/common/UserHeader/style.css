@@ -1,0 +1,27 @@
+.userHeader {
+  width: 100vw;
+  height: 72px;
+  margin: 0 auto;
+  display: inline-flex;
+  box-shadow: 1px 1px 5px 0.1px grey;
+}
+
+.userHeader h2 {
+  line-height: 69.5px;
+  padding-left: 10px;
+}
+
+.menuFoldOutlined {
+  font-size: 24px;
+  line-height: 72px;
+  padding-left: 25px;
+}
+
+.user {
+  height: inherit;
+  line-height: 67px;
+  width: fit-content;
+  display: inline-flex;
+  position: absolute;
+  right: 25px;
+}

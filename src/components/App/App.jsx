@@ -5,7 +5,7 @@ import { Reports } from "components/Reports/Reports";
 import { CreateUser } from "components/CreateUser/CreateUser";
 import { Settings } from "components/Settings/Settings";
 import { Tasks } from "components/Tasks/Tasks";
-import { SideNav } from "components/SideNav/SideNav";
+import { SideNav } from "components/common/SidenavAndHeader/common/SideNav/SideNav";
 import "antd/dist/antd.css";
 
 const { Header, Footer, Sider, Content } = Layout;

@@ -1,10 +1,11 @@
-import { SideNav } from "components/SideNav/SideNav";
+import { SidenavAndHeader } from "components/common/SidenavAndHeader/SidenavAndHeader";
+import "./style.css";
 
 export const Reports = () => {
   return (
     <>
       <h1>Reports route</h1>
-      <SideNav defaultSelectedKeys={"reports"}></SideNav>
+      <SidenavAndHeader defaultSelectedKeys={"reports"} badgeCount={3} />
     </>
   );
 };

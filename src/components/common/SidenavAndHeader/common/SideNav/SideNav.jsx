@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, Menu } from "antd";
+import { Menu } from "antd";
 import { useHistory } from "react-router-dom";
 import {
   DashboardOutlined,
@@ -9,7 +9,7 @@ import {
   SettingOutlined,
 } from "@ant-design/icons";
 import "antd/dist/antd.css";
-import "./SideNav.css";
+import "./style.css";
 
 export const SideNav = (props) => {
   const history = useHistory();
@@ -20,12 +20,14 @@ export const SideNav = (props) => {
 
   return (
     <div className={"sidenav"}>
-      <Image
-        width={"144.25px"}
-        height={"50.25px"}
-        src="https://media.publika.md/md/image/201207/full/efeslogo_hq_jpg_18649000.jpg"
-        preview={false}
-      />
+      <div className="imageWrapper">
+        <img
+          width={"144.25px"}
+          height={"50.25px"}
+          src="https://media.publika.md/md/image/201207/full/efeslogo_hq_jpg_18649000.jpg"
+          preview={false}
+        />
+      </div>
 
       <Menu
         style={{ width: 200 }}
