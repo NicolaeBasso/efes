@@ -25,7 +25,7 @@ export const SideNav = (props) => {
           width={"144.25px"}
           height={"50.25px"}
           src="https://media.publika.md/md/image/201207/full/efeslogo_hq_jpg_18649000.jpg"
-          preview={false}
+          alt="EFES"
         />
       </div>
 

@@ -7,9 +7,9 @@ import "./style.css";
 export const UserHeader = (props) => {
   return (
     <div className={"userHeader"}>
-      <div>
+      <button onClick={props.changeSideNavState}>
         <MenuFoldOutlined className="menuFoldOutlined" />
-      </div>
+      </button>
 
       <div className={"user"}>
         <UserAvatar badgeCount={props.badgeCount} />

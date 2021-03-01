@@ -1,8 +1,7 @@
 .userHeader {
-  width: 100vw;
-  height: 72px;
-  margin: 0 auto;
-  display: inline-flex;
+  width: calc(100vw - 200px);
+  display: flex;
+  justify-content: space-between;
   box-shadow: 1px 1px 5px 0.1px grey;
 }
 
@@ -13,15 +12,43 @@
 
 .menuFoldOutlined {
   font-size: 24px;
-  line-height: 72px;
-  padding-left: 25px;
 }
 
 .user {
-  height: inherit;
+  height: 90%;
   line-height: 67px;
   width: fit-content;
   display: inline-flex;
-  position: absolute;
-  right: 25px;
+  padding: 10px 0 0 0;
+  margin-right: 2rem;
+}
+
+button {
+  display: inline-block;
+  border: none;
+  margin: 0;
+  text-decoration: none;
+  background: #0069ed;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button:hover,
+button:focus {
+  background: #0053ba;
+}
+
+button:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px;
+}
+
+button:active {
+  transform: scale(0.98);
 }

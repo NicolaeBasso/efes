@@ -1,6 +1,6 @@
 .sidenav {
   width: 200px;
-  height: 64px;
+  height: 90px;
   text-align: center;
 }
 
@@ -8,6 +8,7 @@
 }
 
 .imageWrapper {
+  height: 90px;
   width: 176px;
-  line-height: 64px;
+  line-height: 90px;
 }
