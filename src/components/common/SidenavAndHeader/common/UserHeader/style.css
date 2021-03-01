@@ -46,7 +46,7 @@ button:focus {
 
 button:focus {
   outline: 1px solid #fff;
-  outline-offset: -4px;
+  outline-offset: -2px;
 }
 
 button:active {

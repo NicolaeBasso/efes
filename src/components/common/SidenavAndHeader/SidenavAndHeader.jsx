@@ -1,24 +1,41 @@
+import React from "react";
 import { SideNav } from "./common/SideNav/SideNav";
 import { UserHeader } from "./common/UserHeader/UserHeader";
 import "./style.css";
 
-export const SidenavAndHeader = (props) => {
-  const changeSideNavState = () => {
-    console.log("aaa");
-    console.log(document.getElementsByClassName("sidenav").props);
-    //if(document.getElementsByClassName("sidenav").)
+export class SidenavAndHeader extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isSidenavOpen: false,
+      defaultSelectedKeys: props.defaultSelectedKeys,
+      changeSideNavState: props.changeSideNavState,
+    };
+  }
+
+  changeState = () => {
+    console.log(this.state.isSidenavOpen);
+    this.setState({
+      isSidenavOpen: !this.state.isSidenavOpen,
+    });
   };
 
-  return (
-    <div className="SidenavAndHeader">
-      <SideNav
-        defaultSelectedKeys={props.defaultSelectedKeys}
-        changeSideNavState={changeSideNavState}
-      ></SideNav>
-      <UserHeader
-        badgeCount={props.badgeCount}
-        changeSideNavState={changeSideNavState}
-      />
-    </div>
-  );
-};
+  render() {
+    return (
+      <div className="SidenavAndHeader">
+        <SideNav
+          isSidenavOpen={this.state.isSidenavOpen}
+          defaultSelectedKeys={this.state.defaultSelectedKeys}
+          changeSideNavState={this.state.changeSideNavState}
+        />
+        <UserHeader
+          isSidenavOpen={this.state.isSidenavOpen}
+          badgeCount={this.state.badgeCount}
+          changeSideNavState={this.state.changeSideNavState}
+          changeState={this.changeState}
+        />
+      </div>
+    );
+  }
+}

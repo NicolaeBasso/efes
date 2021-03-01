@@ -12,3 +12,7 @@
   width: 176px;
   line-height: 90px;
 }
+
+.sidenavClosed {
+  display: none;
+}

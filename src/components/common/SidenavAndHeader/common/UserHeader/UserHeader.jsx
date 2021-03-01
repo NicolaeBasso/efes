@@ -4,17 +4,29 @@ import { MenuFoldOutlined } from "@ant-design/icons";
 import "antd/dist/antd.css";
 import "./style.css";
 
-export const UserHeader = (props) => {
-  return (
-    <div className={"userHeader"}>
-      <button onClick={props.changeSideNavState}>
-        <MenuFoldOutlined className="menuFoldOutlined" />
-      </button>
+export class UserHeader extends React.Component {
+  constructor(props) {
+    super(props);
+    this.isSidenavOpen = props.isSidenavOpen;
+    this.badgeCount = props.badgeCount;
+    this.changeState = props.changeState;
+  }
 
-      <div className={"user"}>
-        <UserAvatar badgeCount={props.badgeCount} />
-        <h2>Merchandizer One</h2>
+  closeHeader() {}
+  openHeader() {}
+
+  render() {
+    return (
+      <div className={"userHeader"}>
+        <button onClick={this.changeState}>
+          <MenuFoldOutlined className="menuFoldOutlined" />
+        </button>
+
+        <div className={"user"}>
+          <UserAvatar badgeCount={this.badgeCount} />
+          <h2>Merchandizer One</h2>
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
