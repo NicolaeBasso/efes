@@ -13,14 +13,6 @@ import "./style.css";
 
 export const SideNav = (props) => {
   const history = useHistory();
-  //const ref = useRef(props.ref);
-
-  const handleClick = (e) => {
-    console.log("click ", e);
-  };
-
-  //const openSidenav = () => {};
-  //const closeSidenav = () => {};
 
   console.log(props.isSidenavOpen);
   return (

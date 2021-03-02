@@ -4,7 +4,22 @@ import { MenuFoldOutlined } from "@ant-design/icons";
 import "antd/dist/antd.css";
 import "./style.css";
 
-export class UserHeader extends React.Component {
+export const UserHeader = (props) => {
+  return (
+    <div className={props.isSidenavOpen ? "userHeader" : "userHeaderClosed"}>
+      <button onClick={props.changeState}>
+        <MenuFoldOutlined className={"menuFoldOutlined"} />
+      </button>
+
+      <div className={"user"}>
+        <UserAvatar badgeCount={props.badgeCount} />
+        <h2>Merchandizer One</h2>
+      </div>
+    </div>
+  );
+};
+
+/*export class UserHeader extends React.Component {
   constructor(props) {
     super(props);
     this.isSidenavOpen = props.isSidenavOpen;
@@ -29,4 +44,4 @@ export class UserHeader extends React.Component {
       </div>
     );
   }
-}
+}*/

@@ -1,6 +1,7 @@
 import React from "react";
 import { SideNav } from "./common/SideNav/SideNav";
 import { UserHeader } from "./common/UserHeader/UserHeader";
+import { ContentArea } from "../common/ContentArea/ContentArea";
 import "./style.css";
 
 export class SidenavAndHeader extends React.Component {
@@ -36,6 +37,7 @@ export class SidenavAndHeader extends React.Component {
           changeSideNavState={this.state.changeSideNavState}
           changeState={this.changeState}
         />
+        <ContentArea></ContentArea>
       </div>
     );
   }

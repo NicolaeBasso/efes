@@ -5,7 +5,14 @@
   box-shadow: 1px 1px 5px 0.1px grey;
 }
 
-.userHeader h2 {
+.userHeaderClosed {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 1px 1px 5px 0.1px grey;
+}
+
+h2 {
   line-height: 69.5px;
   padding-left: 10px;
 }
@@ -46,9 +53,9 @@ button:focus {
 
 button:focus {
   outline: 1px solid #fff;
-  outline-offset: -2px;
+  outline-offset: -1px;
 }
 
 button:active {
-  transform: scale(0.98);
+  transform: scale(0.99);
 }
