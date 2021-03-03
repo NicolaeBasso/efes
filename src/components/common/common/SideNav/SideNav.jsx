@@ -14,7 +14,6 @@ import "./style.css";
 export const SideNav = (props) => {
   const history = useHistory();
 
-  console.log(props.isSidenavOpen);
   return (
     <div className={props.isSidenavOpen ? "sidenav" : "sidenavClosed"}>
       <div className="imageWrapper">

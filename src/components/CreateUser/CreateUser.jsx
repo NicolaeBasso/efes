@@ -1,4 +1,4 @@
-import { SidenavAndHeader } from "components/common/SidenavAndHeader/SidenavAndHeader";
+import { Layout } from "components/common/Layout/Layout";
 import "./style.css";
 
 export const CreateUser = () => {
@@ -6,7 +6,11 @@ export const CreateUser = () => {
     <>
       <h1>Create User route</h1>
 
-      <SidenavAndHeader defaultSelectedKeys={"createuser"} badgeCount={1} />
+      <Layout
+        defaultSelectedKeys={"createuser"}
+        badgeCount={0}
+        contentType={"createuser"}
+      />
     </>
   );
 };

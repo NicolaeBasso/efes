@@ -1,39 +1,17 @@
 import React from "react";
-import { Table, Button, Space } from "antd";
+import { Table } from "antd";
+import { data } from "./TasksData";
 import "./style.css";
 
-const data = [
-  {
-    key: "1",
-    name: "John Brown",
-    age: 32,
-    address: "New York No. 1 Lake Park",
-  },
-  {
-    key: "2",
-    name: "Jim Green",
-    age: 42,
-    address: "London No. 1 Lake Park",
-  },
-  {
-    key: "3",
-    name: "Joe Black",
-    age: 32,
-    address: "Sidney No. 1 Lake Park",
-  },
-  {
-    key: "4",
-    name: "Jim Red",
-    age: 32,
-    address: "London No. 2 Lake Park",
-  },
-];
+export class TasksContents extends React.Component {
+  constructor(props) {
+    super(props);
 
-export class TasksTable extends React.Component {
-  state = {
-    filteredInfo: null,
-    sortedInfo: null,
-  };
+    this.state = {
+      filteredInfo: null,
+      sortedInfo: null,
+    };
+  }
 
   handleChange = (pagination, filters, sorter) => {
     console.log("Various parameters", pagination, filters, sorter);
@@ -208,11 +186,14 @@ export class TasksTable extends React.Component {
       column.className = "tasksColumn";
     });
 
+    console.log("In TasksContents: " + this.state.isSidenavOpen);
     return (
       <>
         <Table
           scroll={{ x: 2300 }}
-          className="table"
+          className={
+            this.props.isSidenavOpen ? "table narrowed" : "table extended"
+          }
           columns={columns}
           dataSource={data}
           onChange={this.handleChange}

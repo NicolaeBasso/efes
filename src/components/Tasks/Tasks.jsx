@@ -1,7 +1,5 @@
 import React from "react";
-import { SidenavAndHeader } from "components/common/SidenavAndHeader/SidenavAndHeader";
-import { TasksTable } from "./TasksTable/TasksTable";
-import "antd/dist/antd.css";
+import { Layout } from "components/common/Layout/Layout";
 import "./style.css";
 
 export const Tasks = () => {
@@ -9,8 +7,11 @@ export const Tasks = () => {
     <>
       <h1>Tasks route</h1>
 
-      <SidenavAndHeader defaultSelectedKeys={"tasks"} badgeCount={999} />
-      <TasksTable />
+      <Layout
+        defaultSelectedKeys={"tasks"}
+        badgeCount={999}
+        contentType={"tasks"}
+      />
     </>
   );
 };

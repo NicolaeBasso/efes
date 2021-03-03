@@ -1,4 +1,4 @@
-import { SidenavAndHeader } from "components/common/SidenavAndHeader/SidenavAndHeader";
+import { Layout } from "components/common/Layout/Layout";
 import "./style.css";
 
 export const Dashboard = () => {
@@ -6,7 +6,11 @@ export const Dashboard = () => {
     <>
       <h1>Dashboard route</h1>
 
-      <SidenavAndHeader defaultSelectedKeys={"dashboard"} badgeCount={2} />
+      <Layout
+        defaultSelectedKeys={"dashboard"}
+        badgeCount={2}
+        contentType={"dashboard"}
+      />
     </>
   );
 };

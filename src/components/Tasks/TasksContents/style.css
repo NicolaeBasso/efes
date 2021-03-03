@@ -3,7 +3,14 @@
 }
 
 .table {
-  width: calc(100vw - 200px);
   display: block;
   float: right;
+}
+
+.narrowed {
+  width: calc(100% - 200px);
+}
+
+.extended {
+  width: 100%;
 }
