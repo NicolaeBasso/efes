@@ -1,9 +1,7 @@
 import React from "react";
-// common components for Layout component
 import { SideNav } from "../common/SideNav/SideNav";
 import { UserHeader } from "../common/UserHeader/UserHeader";
 import { ContentArea } from "../common/ContentArea/ContentArea";
-import "./style.css";
 
 export class Layout extends React.Component {
   constructor(props) {
@@ -39,7 +37,11 @@ export class Layout extends React.Component {
           />
         </div>
         <ContentArea
-          className={"contents"}
+          className={
+            this.state.isSidenavOpen
+              ? "contentsShrinkedWrapper"
+              : "contentsWrapper"
+          }
           isSidenavOpen={this.state.isSidenavOpen}
           contentType={this.state.contentType}
         />

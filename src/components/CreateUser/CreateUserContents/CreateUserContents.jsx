@@ -1,9 +1,7 @@
-import "./style.css";
-
-export const CreateUserContents = () => {
+export const CreateUserContents = (props) => {
   return (
-    <div className="contents">
-      <h1>Create User Contents</h1>;
+    <div className={props.className}>
+      <h1>Create User Contents</h1>
     </div>
   );
 };

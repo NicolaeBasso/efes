@@ -1,7 +1,6 @@
 import React from "react";
 import { SideNav } from "../common/SideNav/SideNav";
 import { UserHeader } from "../common/UserHeader/UserHeader";
-import "./style.css";
 
 export class SidenavAndHeader extends React.Component {
   constructor(props) {

@@ -1,8 +1,6 @@
-import "./style.css";
-
-export const SettingsContents = () => {
+export const SettingsContents = (props) => {
   return (
-    <div className="contents">
+    <div className={props.className}>
       <h1>Settings Contents</h1>
     </div>
   );

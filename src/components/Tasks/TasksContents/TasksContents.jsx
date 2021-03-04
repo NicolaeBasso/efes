@@ -1,7 +1,6 @@
 import React from "react";
 import { Table } from "antd";
 import { data } from "./TasksData";
-import "./style.css";
 
 export class TasksContents extends React.Component {
   constructor(props) {
@@ -186,20 +185,18 @@ export class TasksContents extends React.Component {
       column.className = "tasksColumn";
     });
 
-    console.log("In TasksContents: " + this.state.isSidenavOpen);
     return (
-      <>
+      <div className={this.props.className}>
         <Table
+          style={{ overflow: "hidden" }}
           scroll={{ x: 2300 }}
-          className={
-            this.props.isSidenavOpen ? "table narrowed" : "table extended"
-          }
+          className={"table"}
           columns={columns}
           dataSource={data}
           onChange={this.handleChange}
           bordered={true}
         />
-      </>
+      </div>
     );
   }
 }

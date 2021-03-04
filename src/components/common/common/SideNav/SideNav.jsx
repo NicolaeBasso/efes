@@ -9,26 +9,41 @@ import {
   SettingOutlined,
 } from "@ant-design/icons";
 import "antd/dist/antd.css";
-import "./style.css";
 
 export const SideNav = (props) => {
   const history = useHistory();
 
   return (
     <div className={props.isSidenavOpen ? "sidenav" : "sidenavClosed"}>
-      <div className="imageWrapper">
+      <div
+        className={
+          props.isSidenavOpen ? "imageOpenWrapper" : "imageClosedWrapper"
+        }
+      >
         <img
-          width={"144.25px"}
           height={"50.25px"}
           src="https://media.publika.md/md/image/201207/full/efeslogo_hq_jpg_18649000.jpg"
           alt="EFES"
+          className="imageSidenav"
         />
       </div>
 
       <Menu
-        style={{ width: 200 }}
+        className="menuOpen"
+        style={
+          props.isSidenavOpen
+            ? {
+                width: "200px",
+                transition: "0.25s ease",
+              }
+            : {
+                width: "0px",
+                transition: "0.25s ease",
+              }
+        }
         defaultSelectedKeys={[props.defaultSelectedKeys]}
         mode="inline"
+        width={props.isSidenavOpen ? "200px" : "0px"}
       >
         <Menu.Item
           key="dashboard"

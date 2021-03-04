@@ -1,5 +1,4 @@
 import { Avatar, Badge } from "antd";
-import "./style.css";
 
 export const UserAvatar = (props) => {
   return (

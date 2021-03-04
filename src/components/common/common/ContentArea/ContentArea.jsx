@@ -3,27 +3,70 @@ import { TasksContents } from "components/Tasks/TasksContents/TasksContents";
 import { ReportsContents } from "components/Reports/ReportsContents/ReportsContents";
 import { CreateUserContents } from "components/CreateUser/CreateUserContents/CreateUserContents";
 import { SettingsContents } from "components/Settings/SettingsContens/SettingsContents";
-import "./style.css";
 
 export const ContentArea = (props) => {
+  let contentToBeDisplayed = (
+    <TasksContents isSidenavOpen={props.isSidenavOpen} />
+  );
+
   switch (props.contentType) {
     case "dashboard":
-      return (
+      contentToBeDisplayed = (
         <DashboardContents
           isSidenavOpen={props.isSidenavOpen}
-          className={"contents"}
+          className="contents"
         />
       );
+      break;
+
     case "tasks":
-      return <TasksContents isSidenavOpen={props.isSidenavOpen} />;
+      contentToBeDisplayed = (
+        <TasksContents
+          isSidenavOpen={props.isSidenavOpen}
+          className="contents"
+        />
+      );
+      break;
+
     case "reports":
-      return <ReportsContents isSidenavOpen={props.isSidenavOpen} />;
+      contentToBeDisplayed = (
+        <ReportsContents
+          isSidenavOpen={props.isSidenavOpen}
+          className="contents"
+        />
+      );
+      break;
+
     case "createuser":
-      return <CreateUserContents isSidenavOpen={props.isSidenavOpen} />;
+      contentToBeDisplayed = (
+        <CreateUserContents
+          isSidenavOpen={props.isSidenavOpen}
+          className="contents"
+        />
+      );
+      break;
+
     case "settings":
-      return <SettingsContents isSidenavOpen={props.isSidenavOpen} />;
+      contentToBeDisplayed = (
+        <SettingsContents
+          isSidenavOpen={props.isSidenavOpen}
+          className="contents"
+        />
+      );
+      break;
 
     default:
-      return <TasksContents isSidenavOpen={props.isSidenavOpen} />;
+      contentToBeDisplayed = (
+        <TasksContents
+          isSidenavOpen={props.isSidenavOpen}
+          className="contents"
+        />
+      );
   }
+
+  const wrappedContent = (
+    <div className={props.className}>{contentToBeDisplayed}</div>
+  );
+
+  return wrappedContent;
 };

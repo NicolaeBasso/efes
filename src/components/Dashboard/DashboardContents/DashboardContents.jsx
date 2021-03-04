@@ -1,8 +1,6 @@
-import "./style.css";
-
-export const DashboardContents = () => {
+export const DashboardContents = (props) => {
   return (
-    <div className="contents">
+    <div className={props.className}>
       <h1>Dashboard Contents</h1>
     </div>
   );

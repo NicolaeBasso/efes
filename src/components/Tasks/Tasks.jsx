@@ -1,6 +1,5 @@
 import React from "react";
 import { Layout } from "components/common/Layout/Layout";
-import "./style.css";
 
 export const Tasks = () => {
   return (

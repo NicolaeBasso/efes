@@ -2,7 +2,7 @@ import React from "react";
 import { UserAvatar } from "../UserAvatar/UserAvatar";
 import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
 import "antd/dist/antd.css";
-import "./style.css";
+
 <MenuUnfoldOutlined />;
 export const UserHeader = (props) => {
   return (

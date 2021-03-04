@@ -4,7 +4,6 @@ import { Reports } from "components/Reports/Reports";
 import { CreateUser } from "components/CreateUser/CreateUser";
 import { Settings } from "components/Settings/Settings";
 import { Tasks } from "components/Tasks/Tasks";
-import "antd/dist/antd.css";
 
 export const App = () => {
   return (
@@ -12,7 +11,7 @@ export const App = () => {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Tasks} />
-          <Route exact path="/tasks" component={Tasks} />
+          <Route path="/tasks" component={Tasks} />
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/reports" component={Reports} />
           <Route path="/createuser" component={CreateUser} />

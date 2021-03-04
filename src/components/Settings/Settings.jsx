@@ -1,5 +1,4 @@
 import { Layout } from "components/common/Layout/Layout";
-import "./style.css";
 
 export const Settings = () => {
   return (
