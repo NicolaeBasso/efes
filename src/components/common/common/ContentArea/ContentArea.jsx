@@ -12,55 +12,37 @@ export const ContentArea = (props) => {
   switch (props.contentType) {
     case "dashboard":
       contentToBeDisplayed = (
-        <DashboardContents
-          isSidenavOpen={props.isSidenavOpen}
-          className="contents"
-        />
+        <DashboardContents isSidenavOpen={props.isSidenavOpen} />
       );
       break;
 
     case "tasks":
       contentToBeDisplayed = (
-        <TasksContents
-          isSidenavOpen={props.isSidenavOpen}
-          className="contents"
-        />
+        <TasksContents isSidenavOpen={props.isSidenavOpen} />
       );
       break;
 
     case "reports":
       contentToBeDisplayed = (
-        <ReportsContents
-          isSidenavOpen={props.isSidenavOpen}
-          className="contents"
-        />
+        <ReportsContents isSidenavOpen={props.isSidenavOpen} />
       );
       break;
 
     case "createuser":
       contentToBeDisplayed = (
-        <CreateUserContents
-          isSidenavOpen={props.isSidenavOpen}
-          className="contents"
-        />
+        <CreateUserContents isSidenavOpen={props.isSidenavOpen} />
       );
       break;
 
     case "settings":
       contentToBeDisplayed = (
-        <SettingsContents
-          isSidenavOpen={props.isSidenavOpen}
-          className="contents"
-        />
+        <SettingsContents isSidenavOpen={props.isSidenavOpen} />
       );
       break;
 
     default:
       contentToBeDisplayed = (
-        <TasksContents
-          isSidenavOpen={props.isSidenavOpen}
-          className="contents"
-        />
+        <TasksContents isSidenavOpen={props.isSidenavOpen} />
       );
   }
 

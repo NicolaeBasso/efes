@@ -29,7 +29,6 @@ export const SideNav = (props) => {
       </div>
 
       <Menu
-        className="menuOpen"
         style={
           props.isSidenavOpen
             ? {

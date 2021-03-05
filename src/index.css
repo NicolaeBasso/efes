@@ -40,16 +40,7 @@
   height: 90px;
   text-align: -webkit-center;
   transition: 0.25s ease;
-}
-
-.menuOpen {
-  width: 200px;
-  transition: 0.25s ease;
-}
-
-.menuClosed {
-  width: 0;
-  transition: 0.25s ease;
+  overflow: hidden;
 }
 
 .avatar {
@@ -155,19 +146,28 @@ button:active {
   display: block;
   float: right;
   width: 100%;
+  padding: 15px;
+  transition: 0.25s ease;
 }
 .contentsShrinkedWrapper {
   background-color: lavender;
   display: block;
   float: right;
   width: calc(100% - 200px);
+  transition: 0.25s ease;
 }
 
 .contents {
   display: block;
-  float: right;
   width: 100%;
   padding: 15px;
+}
+
+.contentsInnerWrapper {
+  padding: 15px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: white;
 }
 
 .contents h1 {
@@ -192,4 +192,15 @@ button:active {
   display: block;
   float: right;
   overflow-y: hidden;
+}
+
+/* CreateUser */
+.createUserContent {
+  width: 100%;
+  padding: 15px;
+  background: white;
+}
+
+.createUserForm {
+  text-align-last: left;
 }

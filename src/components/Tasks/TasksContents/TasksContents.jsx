@@ -186,16 +186,18 @@ export class TasksContents extends React.Component {
     });
 
     return (
-      <div className={this.props.className}>
-        <Table
-          style={{ overflow: "hidden" }}
-          scroll={{ x: 2300 }}
-          className={"table"}
-          columns={columns}
-          dataSource={data}
-          onChange={this.handleChange}
-          bordered={true}
-        />
+      <div className="contentsWrapper">
+        <div className="contentsInnerWrapper">
+          <Table
+            style={{ overflow: "hidden" }}
+            scroll={{ x: 2300 }}
+            className={""}
+            columns={columns}
+            dataSource={data}
+            onChange={this.handleChange}
+            bordered={true}
+          />
+        </div>
       </div>
     );
   }
