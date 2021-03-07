@@ -112,7 +112,7 @@ export const CreateUserContents = (props) => {
   return (
     <div className="contentsWrapper">
       <div className="contentsInnerWrapper">
-        <h1 style={{ width: "100%", textAlign: "center" }}>Create New User</h1>
+        <h1 className="createUserHeader">Create New User</h1>
 
         <Form
           className="createUserForm"
@@ -127,6 +127,7 @@ export const CreateUserContents = (props) => {
           scrollToFirstError
         >
           <Form.Item
+            className="createUserFormItem"
             name="email"
             label="E-mail"
             rules={[
@@ -144,6 +145,7 @@ export const CreateUserContents = (props) => {
           </Form.Item>
 
           <Form.Item
+            className="createUserFormItem"
             name="password"
             label="Password"
             rules={[
@@ -158,6 +160,7 @@ export const CreateUserContents = (props) => {
           </Form.Item>
 
           <Form.Item
+            className="createUserFormItem"
             name="confirm"
             label="Confirm Password"
             dependencies={["password"]}
@@ -186,6 +189,7 @@ export const CreateUserContents = (props) => {
           </Form.Item>
 
           <Form.Item
+            className="createUserFormItem"
             name="nickname"
             label={
               <span>
@@ -207,6 +211,7 @@ export const CreateUserContents = (props) => {
           </Form.Item>
 
           <Form.Item
+            className="createUserFormItem"
             name="residence"
             label="Habitual Residence"
             rules={[
@@ -221,6 +226,7 @@ export const CreateUserContents = (props) => {
           </Form.Item>
 
           <Form.Item
+            className="createUserFormItem"
             name="phone"
             label="Phone Number"
             rules={[
@@ -239,6 +245,12 @@ export const CreateUserContents = (props) => {
           </Form.Item>
 
           <Form.Item
+            style={{
+              display: "block",
+              textAlign: "-webkit-center",
+              marginLeft: "-50%",
+              width: "50%",
+            }}
             name="website"
             label="Website"
             rules={[
@@ -258,50 +270,15 @@ export const CreateUserContents = (props) => {
           </Form.Item>
 
           <Form.Item
-            label="Captcha"
-            extra="We must make sure that your are a human."
-          >
-            <Row gutter={8}>
-              <Col span={12}>
-                <Form.Item
-                  name="captcha"
-                  noStyle
-                  rules={[
-                    {
-                      required: true,
-                      message: "Please input the captcha you got!",
-                    },
-                  ]}
-                >
-                  <Input />
-                </Form.Item>
-              </Col>
-              <Col span={12}>
-                <Button>Get captcha</Button>
-              </Col>
-            </Row>
-          </Form.Item>
-
-          <Form.Item
-            name="agreement"
-            valuePropName="checked"
-            rules={[
-              {
-                validator: (_, value) =>
-                  value
-                    ? Promise.resolve()
-                    : Promise.reject(new Error("Should accept agreement")),
-              },
-            ]}
+            className="createUserFormButtonItem"
             {...tailFormItemLayout}
           >
-            <Checkbox>
-              I have read the <a href="">agreement</a>
-            </Checkbox>
-          </Form.Item>
-          <Form.Item {...tailFormItemLayout}>
-            <Button type="primary" htmlType="submit">
-              Register
+            <Button
+              type="primary"
+              htmlType="submit"
+              style={{ fontWeight: "bold" }}
+            >
+              Create Account
             </Button>
           </Form.Item>
         </Form>

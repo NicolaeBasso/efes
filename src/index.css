@@ -1,12 +1,14 @@
 /* ant design styles */
 @import "antd/dist/antd.css";
 
-/* top parent block */
+/* root - top parent block */
 #root {
   overflow: hidden visible;
   height: -webkit-fill-available;
 }
 
+/*  SideNav, UserHeader, UserAvatar 
+    side navigation and header      */
 .SidenavUserWrapper {
   display: inline-flex;
 }
@@ -140,7 +142,18 @@ button:active {
 .SidenavAndHeader {
   display: inline-flex;
 }
+/*  End of: SideNav, UserHeader, UserAvatar 
+    side navigation and header      */
 
+/*  Layout 
+    main wrappers   */
+.contentsInnerWrapper {
+  padding: 15px;
+  width: 100%;
+  height: calc(100vh - 120px);
+  border-radius: 5px;
+  background-color: white;
+}
 .contentsWrapper {
   background-color: lavender;
   display: block;
@@ -149,41 +162,28 @@ button:active {
   padding: 15px;
   transition: 0.25s ease;
 }
-.contentsShrinkedWrapper {
+.contentsWrapper h1,
+h2 {
+  font-family: -webkit-pictograph;
+}
+.contentsOuterWrapper {
+  background-color: lavender;
+  display: block;
+  float: right;
+  width: 100%;
+  transition: 0.25s ease;
+}
+.contentsShrinkedOuterWrapper {
   background-color: lavender;
   display: block;
   float: right;
   width: calc(100% - 200px);
   transition: 0.25s ease;
 }
+/*  End of: Layout 
+    main wrappers   */
 
-.contents {
-  display: block;
-  width: 100%;
-  padding: 15px;
-}
-
-.contentsInnerWrapper {
-  padding: 15px;
-  width: 100%;
-  border-radius: 5px;
-  background-color: white;
-}
-
-.contents h1 {
-  float: inherit;
-}
-
-.contentsShrinked {
-  display: block;
-  float: right;
-  width: calc(100% - 200px);
-}
-
-.contentsShrinked h1 {
-  float: inherit;
-}
-
+/* Tasks */
 .tasksColumn {
   text-align: left;
 }
@@ -193,6 +193,7 @@ button:active {
   float: right;
   overflow-y: hidden;
 }
+/* End of: Tasks */
 
 /* CreateUser */
 .createUserContent {
@@ -202,5 +203,23 @@ button:active {
 }
 
 .createUserForm {
-  text-align-last: left;
+  text-align: -webkit-center;
 }
+
+.createUserFormItem {
+  display: inline-block;
+  width: 50%;
+}
+
+.createUserFormButtonItem {
+  width: 100%;
+  text-align: left;
+  margin-left: -50%;
+}
+
+.createUserHeader {
+  width: 100%;
+  text-align: center;
+  font-family: ;
+}
+/* End of: CreateUser */

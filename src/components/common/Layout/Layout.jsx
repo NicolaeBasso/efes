@@ -22,7 +22,6 @@ export class Layout extends React.Component {
   };
 
   render() {
-    console.log("In Layout: " + this.state.isSidenavOpen);
     return (
       <>
         <div className="SidenavAndHeader">
@@ -39,8 +38,8 @@ export class Layout extends React.Component {
         <ContentArea
           className={
             this.state.isSidenavOpen
-              ? "contentsShrinkedWrapper"
-              : "contentsWrapper"
+              ? "contentsShrinkedOuterWrapper"
+              : "contentsOuterWrapper"
           }
           isSidenavOpen={this.state.isSidenavOpen}
           contentType={this.state.contentType}
