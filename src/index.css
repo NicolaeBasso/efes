@@ -150,7 +150,7 @@ button:active {
 .contentsInnerWrapper {
   padding: 15px;
   width: 100%;
-  height: calc(100vh - 105px);
+  height: 100%;
   border-radius: 5px;
   background-color: white;
 }
@@ -170,6 +170,7 @@ h2 {
   background-color: lavender;
   display: block;
   float: right;
+  height: 100%;
   width: 100%;
   transition: 0.25s ease;
 }
@@ -177,6 +178,7 @@ h2 {
   background-color: lavender;
   display: block;
   float: right;
+  height: 100%;
   width: calc(100% - 200px);
   transition: 0.25s ease;
 }

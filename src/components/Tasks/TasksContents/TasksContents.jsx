@@ -189,7 +189,6 @@ export class TasksContents extends React.Component {
       <div className="contentsWrapper">
         <div className="contentsInnerWrapper">
           <Table
-            style={{ overflow: "hidden" }}
             scroll={{ x: 2300 }}
             className={""}
             columns={columns}
