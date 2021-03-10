@@ -24,6 +24,7 @@
   width: 280px;
 }
 
+/* Reports */
 .button {
   height: 45px;
   background-color: #0069ed;
@@ -44,3 +45,4 @@
 .filtersUploadWrapper {
   display: flex;
 }
+/* End of: Reports */

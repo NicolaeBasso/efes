@@ -225,3 +225,82 @@ h2 {
   font-family: ;
 }
 /* End of: CreateUser */
+
+.select {
+  display: inline-flex;
+  width: 560px;
+  height: 35px;
+  justify-content: space-between;
+  padding: 0 20px 0 20px;
+}
+
+.select p {
+  font-weight: 500;
+  margin-block: auto;
+}
+
+.datePicker {
+  width: 250px;
+}
+
+.dropdownPicker {
+  width: 250px;
+}
+
+.filters {
+  padding: 20px 10px 20px 20px;
+  width: 280px;
+}
+
+/* Reports */
+.button {
+  height: 45px;
+  background-color: #0069ed;
+  color: white;
+  width: 250px;
+  border-radius: 4px;
+}
+
+.filtersContent {
+  display: block;
+}
+
+.upload {
+  padding: 20px 20px 20px 10px;
+  width: 280px;
+}
+
+.filtersUploadWrapper {
+  display: flex;
+}
+/* End of: Reports */
+
+/* Settings */
+.changeGlobalVisitRate {
+  width: 560px;
+  padding: 0 20px 20px 0;
+  display: inline-flex;
+}
+
+.settingsUpload {
+  padding: 0 20px 10px 0;
+
+  width: 280px;
+}
+
+.settingsUploadBlock {
+  padding: 10px 0 20px 10px;
+}
+
+.globalVisitRateButton {
+  font-weight: bold;
+}
+
+.globalVIsitRateInput {
+  margin-right: 5px;
+}
+
+.settingsH2 {
+  padding-left: 10px;
+}
+/* End of: Settings */
