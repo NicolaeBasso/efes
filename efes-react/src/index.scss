@@ -1,0 +1,280 @@
+/* ant design styles */
+@import "antd/dist/antd.css";
+/* root - top parent block */
+/*  SideNav, UserHeader, UserAvatar 
+    side navigation and header      */
+/*  End of: SideNav, UserHeader, UserAvatar 
+    side navigation and header      */
+/*  Layout 
+    main wrappers   */
+/*  End of: Layout 
+    main wrappers   */
+/* Tasks */
+/* End of: Tasks */
+/* CreateUser */
+/* End of: CreateUser */
+/* Reports */
+/* End of: Reports */
+/* Settings */
+/* End of: Settings */
+#root {
+  overflow: hidden visible;
+  height: -webkit-fill-available;
+}
+.SidenavUserWrapper {
+  display: inline-flex;
+}
+.imageOpenWrapper {
+  height: 90px;
+  width: 150px;
+  line-height: 90px;
+}
+.imageClosedWrapper {
+  height: 90px;
+  width: 0;
+  line-height: 90px;
+}
+.imageSidenav {
+  width: inherit;
+  transition: 0.25s ease;
+}
+.sidenav {
+  width: 200px;
+  height: 90px;
+  text-align: -webkit-center;
+  transition: 0.25s ease;
+}
+.sidenavClosed {
+  width: 0;
+  height: 90px;
+  text-align: -webkit-center;
+  transition: 0.25s ease;
+  overflow: hidden;
+}
+.sidenavMenu {
+  padding-top: 15px;
+  width: "200px";
+  transition: "0.25s ease";
+}
+.sidenavMenuClosed {
+  padding-top: 15px;
+  width: "0px";
+  transition: "0.25s ease";
+}
+.avatar {
+  background-color: white;
+  border: solid gray 3px;
+  color: black;
+  font-weight: bold;
+  p {
+    line-height: 58px;
+  }
+}
+.avatarWithNotifications {
+  p {
+    line-height: 58px;
+  }
+  background-color: white;
+  border: solid gray 3px;
+  color: black;
+  font-weight: bold;
+}
+.userHeader {
+  width: calc(100vw - 200px);
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
+  h2 {
+    line-height: 69.5px;
+    padding-left: 10px;
+  }
+}
+.userHeaderClosed {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
+  h2 {
+    line-height: 69.5px;
+    padding-left: 10px;
+  }
+}
+.menuFoldOutlined {
+  font-size: 24px;
+}
+.user {
+  height: 90%;
+  line-height: 67px;
+  width: fit-content;
+  display: inline-flex;
+  padding: 10px 0 0 0;
+  margin-right: 2rem;
+}
+button {
+  display: inline-block;
+  border: none;
+  margin: 0;
+  text-decoration: none;
+  background: #0069ed;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  &:hover {
+    background: #0053ba;
+  }
+  &:focus {
+    background: #0053ba;
+    outline: 1px solid #fff;
+    outline-offset: -1px;
+  }
+  &:active {
+    transform: scale(0.99);
+  }
+}
+.SidenavAndHeader {
+  display: inline-flex;
+}
+.contentsInnerWrapper {
+  padding: 15px;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: white;
+}
+.contentsWrapper {
+  background-color: lavender;
+  display: block;
+  float: right;
+  width: 100%;
+  padding: 15px 15px 0 15px;
+  transition: 0.25s ease;
+  h1 {
+    font-family: -webkit-pictograph;
+  }
+}
+h2 {
+  font-family: -webkit-pictograph;
+}
+.contentsOuterWrapper {
+  background-color: lavender;
+  display: block;
+  float: right;
+  height: 100%;
+  width: 100%;
+  transition: 0.25s ease;
+}
+.contentsShrinkedOuterWrapper {
+  background-color: lavender;
+  display: block;
+  float: right;
+  height: 100%;
+  width: calc(100% - 200px);
+  transition: 0.25s ease;
+}
+.tasksColumn {
+  text-align: left;
+}
+.table {
+  display: block;
+  float: right;
+  overflow-y: hidden;
+}
+.createUserContent {
+  width: 100%;
+  padding: 15px;
+  background: white;
+}
+.createUserForm {
+  text-align: -webkit-center;
+}
+.createUserFormItem {
+  display: inline-block;
+  width: 50%;
+}
+.createUserFormButtonItem {
+  width: 100%;
+  text-align: left;
+  margin-left: -50%;
+}
+.createUserHeader {
+  width: 100%;
+  text-align: center;
+}
+.select {
+  display: inline-flex;
+  width: 560px;
+  height: 35px;
+  justify-content: space-between;
+  padding: 0 20px 0 20px;
+  p {
+    font-weight: 500;
+    margin-block: auto;
+  }
+}
+.datePicker {
+  width: 250px;
+}
+.dropdownPicker {
+  width: 250px;
+}
+.filters {
+  padding: 20px 10px 20px 20px;
+  width: 280px;
+}
+.button {
+  height: 45px;
+  background-color: #0069ed;
+  color: white;
+  width: 250px;
+  border-radius: 4px;
+}
+.filtersContent {
+  display: block;
+}
+.upload {
+  padding: 20px 20px 20px 10px;
+  width: 280px;
+}
+.filtersUploadWrapper {
+  display: flex;
+}
+.changeGlobalVisitRate {
+  width: 560px;
+  padding: 0 20px 20px 0;
+  display: inline-flex;
+}
+.settingsUpload {
+  padding: 0 20px 10px 0;
+  width: 280px;
+}
+.settingsUploadBlock {
+  padding: 10px 0 20px 10px;
+}
+.globalVisitRateButton {
+  font-weight: bold;
+}
+.EditVisitRateButton {
+  margin-right: 5px;
+}
+.globalVIsitRateInput {
+  margin-right: 5px;
+}
+.editable-row {
+  .ant-form-item-explain {
+    position: absolute;
+    top: 100%;
+    font-size: 12px;
+  }
+}
+.settingsH2 {
+  padding-left: 10px;
+}

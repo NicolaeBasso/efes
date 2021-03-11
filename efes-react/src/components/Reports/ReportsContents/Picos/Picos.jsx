@@ -9,12 +9,8 @@ import {
   Table,
 } from "antd";
 import { DownloadOutlined } from "@ant-design/icons";
-import { columns, data, onTableFiltersChange } from "./PicosData.js";
+import { data, onTableFiltersChange } from "./PicosData.js";
 import "./style.css";
-
-function onChange(value) {
-  console.log(`selected ${value}`);
-}
 
 function onBlur() {
   console.log("blur");
@@ -32,7 +28,7 @@ export const Picos = () => {
   const { Option } = Select;
 
   const onChange = (date, dateString) => {
-    console.log(date, dateString);
+    //console.log(date, dateString);
   };
 
   const onChangeFilters = () => {};
@@ -64,6 +60,69 @@ export const Picos = () => {
       }
     },
   };
+
+  const columns = [
+    {
+      title: "Nume Merchandiser",
+      dataIndex: "name",
+    },
+    {
+      title: "Cod Magazin",
+      dataIndex: "chinese",
+      sorter: {
+        compare: (a, b) => a.chinese - b.chinese,
+        multiple: 3,
+      },
+    },
+    {
+      title: "Denumire Magazin",
+      dataIndex: "math",
+      sorter: {
+        compare: (a, b) => a.math - b.math,
+        multiple: 2,
+      },
+    },
+    {
+      title: "Adresa",
+      dataIndex: "english",
+      sorter: {
+        compare: (a, b) => a.english - b.english,
+        multiple: 1,
+      },
+    },
+    {
+      title: "Retea",
+      dataIndex: "english",
+      sorter: {
+        compare: (a, b) => a.english - b.english,
+        multiple: 1,
+      },
+    },
+    {
+      title: "Produs Lipsa",
+      dataIndex: "english",
+      sorter: {
+        compare: (a, b) => a.english - b.english,
+        multiple: 1,
+      },
+    },
+    {
+      title: "Virsta produs",
+      dataIndex: "english",
+      sorter: {
+        compare: (a, b) => a.english - b.english,
+        multiple: 1,
+      },
+    },
+    {
+      title: "Cantitate",
+      dataIndex: "english",
+      sorter: {
+        compare: (a, b) => a.english - b.english,
+        multiple: 1,
+      },
+    },
+  ];
 
   return (
     <>

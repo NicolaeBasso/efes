@@ -1,36 +1,14 @@
-import React, { useState, useEffect } from "react";
-import { Button, Upload, Table, Input } from "antd";
+import React, { useState } from "react";
+import { Button, Upload, Input } from "antd";
 import { DownloadOutlined } from "@ant-design/icons";
 import {
   originData,
-  EditableCell,
   EditableVisitRateTable,
-  onTableFiltersChange,
 } from "./EditableVisitRateTable/EditableVisitRateTable";
 import "./style.css";
 
 export const SettingsContents = (props) => {
   const [tableData, setTableData] = useState(originData);
-
-  const changeRowRate = (text, record) => {
-    //console.log(text);
-    console.log(record);
-    console.log(typeof record.key);
-
-    const rate = 99;
-    let tempData = [...tableData];
-
-    tempData[parseInt(record.key)] = rate;
-
-    //setTableData(...tempData);
-
-    /*if (rate) {
-      tempData.forEach((dataItem) => {
-        dataItem.rate = rate;
-      });
-      setTableData([...tempData]);
-    } else return;*/
-  };
 
   const changeGlobalVisitRate = (text, record) => {
     const rate = document.getElementById("GlobalVisitRateInput").value;
@@ -63,46 +41,6 @@ export const SettingsContents = (props) => {
       }
     },
   };
-
-  const columns = [
-    {
-      title: "Nume Merchandiser",
-      dataIndex: "name",
-    },
-    {
-      title: "Rata Vizita",
-      dataIndex: "rate",
-      sorter: {
-        compare: (a, b) => a.rate - b.rate,
-        multiple: 3,
-      },
-    },
-    /*{
-      title: "Edit Rate",
-      dataIndex: "editRate",
-      sorter: {
-        compare: (a, b) => a.editRate - b.editRate,
-        multiple: 2,
-      },
-    },*/
-    {
-      title: "Edit Rate",
-      dataIndex: "editRate",
-      sorter: {
-        compare: (a, b) => a.editRate - b.editRate,
-        multiple: 2,
-      },
-      render: (text, record) => (
-        <Button
-          type="primary"
-          htmlType="submit"
-          //onClick={changeGlobalVisitRate(text, record)}
-        >
-          Edit
-        </Button>
-      ),
-    },
-  ];
 
   return (
     <div className="contentsWrapper">

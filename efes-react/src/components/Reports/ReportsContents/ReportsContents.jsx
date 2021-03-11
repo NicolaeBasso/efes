@@ -4,9 +4,6 @@ import { Picos } from "../ReportsContents/Picos/Picos";
 const { TabPane } = Tabs;
 
 export const ReportsContents = (props) => {
-  //console.log(Tabs);
-  //console.log(TabPane);
-
   const callback = (key) => {
     console.log(key);
   };

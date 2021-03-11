@@ -1,13 +1,5 @@
 import React, { useState } from "react";
-import {
-  Table,
-  Input,
-  InputNumber,
-  Popconfirm,
-  Form,
-  Typography,
-  Button,
-} from "antd";
+import { Table, Input, InputNumber, Popconfirm, Form, Button } from "antd";
 
 export const originData = [
   {
@@ -31,15 +23,6 @@ export const originData = [
     rate: 88,
   },
 ];
-
-/* for (let i = 0; i < 100; i++) {
-  originData.push({
-    key: i.toString(),
-    name: `Edrward ${i}`,
-    age: 32,
-    address: `London Park no. ${i}`,
-  });
-} */
 
 export const EditableCell = ({
   editing,
@@ -132,31 +115,10 @@ export const EditableVisitRateTable = () => {
       },
       editable: true,
     },
-    /*{
-        title: "Edit Rate",
-        dataIndex: "editRate",
-        sorter: {
-          compare: (a, b) => a.editRate - b.editRate,
-          multiple: 2,
-        },
-      },*/
     {
       title: "Edit Rate",
       dataIndex: "editRate",
-      sorter: {
-        compare: (a, b) => a.editRate - b.editRate,
-        multiple: 2,
-      },
       editable: false,
-      /* render: (text, record) => (
-        <Button
-          type="primary"
-          htmlType="submit"
-          //onClick={changeGlobalVisitRate(text, record)}
-        >
-          Edit
-        </Button>
-      ), */
 
       render: (_, record) => {
         const editable = isEditing(record);
@@ -165,21 +127,10 @@ export const EditableVisitRateTable = () => {
             <Button
               className="EditVisitRateButton"
               type="primary"
-              htmlType="submit"
               onClick={() => save(record.key)}
-              //onClick={changeGlobalVisitRate(text, record)}
             >
               Save
             </Button>
-            {/* <a
-              href="javascript:;"
-              onClick={() => save(record.key)}
-              style={{
-                marginRight: 8,
-              }}
-            >
-              Save
-            </a> */}
             <Popconfirm title="Sure to cancel?" onConfirm={cancel}>
               <a>Cancel</a>
             </Popconfirm>
