@@ -45,6 +45,18 @@
   overflow: hidden;
 }
 
+.sidenavMenu {
+  padding-top: 15px;
+  width: "200px";
+  transition: "0.25s ease";
+}
+
+.sidenavMenuClosed {
+  padding-top: 15px;
+  width: "0px";
+  transition: "0.25s ease";
+}
+
 .avatar {
   background-color: white;
   border: solid gray 3px;
@@ -284,7 +296,6 @@ h2 {
 
 .settingsUpload {
   padding: 0 20px 10px 0;
-
   width: 280px;
 }
 
@@ -296,8 +307,18 @@ h2 {
   font-weight: bold;
 }
 
+.EditVisitRateButton {
+  margin-right: 5px;
+}
+
 .globalVIsitRateInput {
   margin-right: 5px;
+}
+
+.editable-row .ant-form-item-explain {
+  position: absolute;
+  top: 100%;
+  font-size: 12px;
 }
 
 .settingsH2 {

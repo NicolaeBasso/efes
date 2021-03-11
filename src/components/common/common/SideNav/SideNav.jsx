@@ -34,10 +34,12 @@ export const SideNav = (props) => {
             ? {
                 width: "200px",
                 transition: "0.25s ease",
+                paddingTop: "15px",
               }
             : {
                 width: "0px",
                 transition: "0.25s ease",
+                paddingTop: "15px",
               }
         }
         defaultSelectedKeys={[props.defaultSelectedKeys]}
